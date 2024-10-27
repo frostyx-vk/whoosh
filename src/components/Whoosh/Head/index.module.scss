@@ -1,0 +1,302 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  &__navigate {
+    height: 80px;
+    background-color: var(--background-main);
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: center;
+
+    @include mobile-small {
+      height: 64px;
+      padding-left: 16px;
+      padding-right: 16px;
+      justify-content: space-between;
+    }
+  }
+
+  &__profile {
+    display: none;
+
+    @include mobile-small {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include mobile-small {
+      display: block;
+    }
+  }
+
+  &__menuBlock {
+    z-index: 60;
+    background-color: var(--color-white);
+    position: absolute;
+    width: 246px;
+    height: 616px;
+    right: 0px;
+    top: 0px;
+    padding: 24px 12px 0 16px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 16px 16px rgba(73, 99, 176, 0.16));
+    transform: translateX(100%);
+    transition: all 0.5s;
+
+    display: none;
+
+    @include mobile-small {
+      display: block;
+    }
+  }
+
+  &__menuBlockOpen {
+    transform: translateX(0);
+  }
+
+  &__logo {
+    width: 192px;
+    height: 64px;
+    margin-right: 66px;
+
+    @include mobile-small {
+      margin-right: 0px;
+      width: 120px;
+      height: 40px;
+    }
+  }
+
+  &__city {
+    width: 132px;
+    height: 24px;
+    display: flex;
+    gap: 6px;
+    margin-right: 169px;
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__cityNameMenu {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__cityMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cityMenu svg {
+    cursor: pointer;
+  }
+
+  &__citySvg {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  &__cityText {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-family: Intro Book;
+    font-size: 16px;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.7;
+      border-bottom: 1px dashed #c1cfef;
+    }
+  }
+
+  &__search {
+    width: 182px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--color-light-blue);
+    background: #fff;
+    margin-right: 211px;
+
+    &:hover {
+      background-color: #f1f5ff;
+    }
+
+    &:active {
+      border: 1px solid var(--color-blue);
+      background-color: var(--color-white);
+    }
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__searchMenu {
+    width: 242px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 73px;
+    border-radius: 4px;
+    border: 1px solid var(--color-light-blue);
+    background: #fff;
+    margin-top: 40px;
+  }
+
+  &__searchMenu svg {
+    cursor: pointer;
+  }
+
+  &__inputTextMenu {
+    width: 121px;
+    height: 24px;
+    margin: 0;
+    border: 0;
+    opacity: 0.32;
+
+    &::placeholder {
+      color: var(--color-dark-blue);
+      font-family: Intro Book;
+      font-size: 16px;
+    }
+
+    outline: none;
+  }
+
+  &__linkBlokMenu {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 24px;
+    margin-top: 44px;
+  }
+
+  &__textLink {
+    width: min-content;
+    color: var(--text-color);
+    font-family: Intro Book;
+    font-size: 16px;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.7;
+      border-bottom: 1px dashed #c1cfef;
+      cursor: pointer;
+    }
+  }
+
+  &__buttonMenu {
+    width: 242px;
+    height: 48px;
+    border-radius: 32px;
+    background-color: var(--color-blue);
+    border: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Intro Regular;
+    font-size: 18px;
+    line-height: 32px;
+
+    &:hover {
+      background-color: #1252db;
+    }
+
+    cursor: pointer;
+    margin-top: 250px;
+  }
+
+  &__searchSvg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &__inputText {
+    width: 106px;
+    height: 14px;
+    margin: 0;
+    border: 0;
+    opacity: 0.56;
+
+    &::placeholder {
+      color: var(--color-dark-blue);
+      font-family: Intro Book;
+      font-size: 14px;
+    }
+
+    outline: none;
+    background-color: inherit !important;
+  }
+
+  &__text {
+    display: flex;
+    gap: 36px;
+    margin-right: 32px;
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__textHeader {
+    color: var(--text-color);
+    font-family: Intro Book;
+    font-size: 16px;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.7;
+      border-bottom: 1px dashed #c1cfef;
+      cursor: pointer;
+    }
+  }
+
+  &__login {
+    background-color: var(--color-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__loginSvg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__sepLine {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-blue);
+    opacity: 0.16;
+  }
+}

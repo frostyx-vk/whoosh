@@ -1,0 +1,60 @@
+@import "../../styles/mixins.scss";
+
+.opentext {
+  width: 100%;
+  height: 352px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  @include mobile-small {
+    height: 665px;
+    width: auto;
+    padding: 0 16px 0 16px;
+  }
+
+  &__text {
+    position: relative;
+    text-align: start;
+    margin-top: 73px;
+    width: 1160px;
+    height: auto;
+    color: var(--text-color);
+    font-family: Intro Book;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height 0.5s;
+
+    @include mobile-small {
+      width: auto;
+      max-height: 290px;
+      margin-top: 32px;
+    }
+  }
+
+  &__textFull {
+    max-height: 200px;
+
+    @include mobile-small {
+      max-height: 580px;
+    }
+  }
+
+  &__textParagraph {
+    margin-top: 25px;
+  }
+
+  &__etc {
+    position: absolute;
+    right: 20px;
+    bottom: -5px;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}

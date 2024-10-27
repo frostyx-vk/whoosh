@@ -1,0 +1,27 @@
+.separator {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+
+  &__boxSvg {
+    width: 32px;
+    height: 28px;
+    position: absolute;
+    top: -12px;
+  }
+
+  &__lineLeft {
+    border-top: 2px solid var(--color-light-blue);
+    opacity: 0.5;
+    width: 800px;
+    margin-right: 50px;
+  }
+
+  &__lineRight {
+    border-top: 2px solid var(--color-light-blue);
+    opacity: 0.5;
+    width: 800px;
+    margin-left: 50px;
+  }
+}

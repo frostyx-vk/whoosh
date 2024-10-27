@@ -1,0 +1,109 @@
+@import "../../styles/mixins.scss";
+
+.partners {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include mobile-small {
+    height: 302px;
+  }
+
+  &__headerBlock {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 269px;
+    margin-top: 97px;
+
+    @include mobile-small {
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+
+  &__headerText {
+    color: var(--color-dark-blue);
+    text-align: center;
+    font-family: Intro Bold;
+    font-size: 40px;
+
+    @include mobile-small {
+      font-size: 24px;
+    }
+  }
+
+  &__lelColab {
+    width: 184px;
+    height: 40px;
+    margin-right: 103px;
+    border-radius: 24px;
+    border: 1px solid #dde7fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__lelColabAdapt {
+    width: 328px;
+    height: 40px;
+    border-radius: 24px;
+    border: 1px solid #dde7fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    display: none;
+
+    @include mobile-small {
+      display: flex;
+      margin-top: 46px;
+    }
+  }
+
+  &__colabText {
+    color: var(--color-dark-blue);
+    text-align: center;
+    font-family: Intro Book;
+    font-size: 16px;
+  }
+
+  &__briefcaseSvg {
+    width: 17px;
+    height: 16px;
+  }
+
+  &__splide {
+    margin-top: 80px;
+
+    @include mobile-small {
+      margin-top: 36px;
+    }
+  }
+
+  &__slpideElem {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

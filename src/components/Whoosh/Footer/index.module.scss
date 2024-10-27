@@ -1,0 +1,303 @@
+@import "../../styles/mixins.scss";
+
+.footer {
+  width: 100%;
+  height: 528px;
+  background-color: var(--background-main);
+  border-top: 1px solid var(--color-light-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  @include mobile-small {
+    width: auto;
+    height: 1008px;
+    padding: 0 16px 0 16px;
+  }
+
+  &__mainTable {
+    display: flex;
+    gap: 66px;
+    margin-top: 84px;
+
+    @include mobile-small {
+      flex-direction: column;
+      margin-top: 45px;
+      gap: 35px;
+    }
+  }
+
+  &__centerBlok {
+    display: flex;
+    gap: 66px;
+
+    @include mobile-small {
+      gap: 18px;
+    }
+  }
+
+  &__card {
+    width: 200px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  &__card1 {
+    position: relative;
+    width: 240px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    @include mobile-small {
+      width: auto;
+    }
+  }
+
+  &__cardAdapt {
+    @include mobile-small {
+      width: 156px;
+    }
+  }
+
+  &__cardAdapt2 {
+    @include mobile-small {
+      width: 100%;
+    }
+  }
+
+  &__cartHead {
+    color: var(--color-dark-blue);
+    font-family: Intro Bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    text-align: start;
+    width: 100%;
+  }
+
+  &__cartHeadBorder {
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-light-blue);
+  }
+
+  &__cardText {
+    text-align: start;
+    color: var(--color-dark-blue);
+    font-family: Intro Book;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.64;
+    margin-top: 28px;
+  }
+
+  &__cardTextAdapt {
+    @include mobile-small {
+      margin-left: 60px;
+    }
+  }
+
+  &__cardText2 {
+    text-align: start;
+    color: var(--color-dark-blue);
+    font-family: Intro Book;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0.64;
+    margin-top: 12px;
+  }
+
+  &__cardText2 p {
+    cursor: pointer;
+  }
+
+  &__cardPhone {
+    color: var(--color-dark-blue);
+    font-family: Intro Bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 15px;
+  }
+
+  &__cardAdr {
+    margin-top: 25px;
+    display: flex;
+    gap: 13px;
+  }
+
+  &__cardPin {
+    width: 12px;
+    height: 16px;
+  }
+
+  &__cardAdrText {
+    color: var(--color-dark-blue);
+    font-family: Intro Book;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.64;
+    text-align: start;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 63px;
+
+    @include mobile-small {
+      width: 100%;
+      justify-content: center;
+      margin-top: 28px;
+      gap: 38px;
+    }
+  }
+
+  &__social svg {
+    cursor: pointer;
+  }
+
+  &__symbol {
+    position: absolute;
+    left: -60px;
+    top: 44px;
+
+    @include mobile-small {
+      left: 0px;
+      top: 43px;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    margin-top: 34px;
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__separatorLogo {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    margin-top: 36px;
+    display: none;
+
+    @include mobile-small {
+      display: flex;
+      order: 2;
+    }
+  }
+
+  &__separatorLeft {
+    border-top: 3px solid var(--color-light-blue);
+    opacity: 0.5;
+    width: 548px;
+    margin-right: 35px;
+    opacity: 0.72;
+
+    @include mobile-small {
+      width: 130px;
+    }
+  }
+
+  &__separatorText {
+    color: var(--color-light-blue);
+    text-align: center;
+    font-family: Intro Regular;
+    font-size: 14px;
+    line-height: 24px;
+    width: 55px;
+    height: 24px;
+    position: absolute;
+    top: -11px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &__separatorRight {
+    border-top: 3px solid var(--color-light-blue);
+    opacity: 0.5;
+    width: 548px;
+    margin-left: 35px;
+    opacity: 0.72;
+
+    @include mobile-small {
+      width: 130px;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 23px;
+
+    @include mobile-small {
+      flex-direction: column;
+    }
+  }
+
+  &__logoSvg {
+    flex-basis: 20%;
+
+    @include mobile-small {
+      display: none;
+    }
+  }
+
+  &__logoSvgAdapt {
+    display: none;
+
+    @include mobile-small {
+      display: block;
+      order: 3;
+      margin-top: 32px;
+    }
+  }
+
+  &__textCopy {
+    color: var(--color-dark-blue);
+    font-family: Intro Book;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.64;
+    flex-basis: 40%;
+
+    @include mobile-small {
+      order: 1;
+      margin-top: 24px;
+    }
+  }
+
+  &__privBlok {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 40%;
+
+    @include mobile-small {
+      order: 0;
+      margin-top: 26px;
+    }
+  }
+
+  &__priv {
+    color: var(--color-dark-blue);
+    font-family: Intro Book;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.64;
+    cursor: pointer;
+  }
+}
